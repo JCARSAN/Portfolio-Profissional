@@ -1,0 +1,29 @@
+.computer-text{
+    border-right: 2px solid rgba(255,255,255,0.5);
+    height: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.typing-animation {
+    animation: 
+        blinkCursor 500ms infinite normal, 
+        typing 4s steps(50) 1s infinite normal;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 13.5rem;
+    }
+}
+
+@keyframes blinkCursor {
+    from {
+        border-right-color: rgba(255,255,255,0.5);
+    }
+    to {
+        border-right-color: transparent; 
+    }
+}

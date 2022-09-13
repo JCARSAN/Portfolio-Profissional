@@ -1,6 +1,7 @@
 import { ChakraProvider } from '@chakra-ui/react'
 import { theme } from '../styles/theme'
 import { useRouter } from 'next/router'
+import "../styles/animations.css";
 
 function MyApp({ Component, pageProps }) {
 
