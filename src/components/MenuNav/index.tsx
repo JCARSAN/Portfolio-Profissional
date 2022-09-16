@@ -1,9 +1,13 @@
-import { Flex, HStack, Link } from '@chakra-ui/react'
+import { background, Flex, HStack, Link } from '@chakra-ui/react'
 
-export function MenuNav(){
+type MenuNavprops = {
+    isScrolled: boolean;
+}
+
+export function MenuNav( { isScrolled } : MenuNavprops ){
     return(
-        <Flex as="nav" 
-            backgroundColor="rgba(255,255,255,0.05)" 
+        <Flex as="nav"
+            backgroundColor={isScrolled ? "rgba(25,25,25,1)" : "rgba(255,255,255,0.05)" }
             width="100%" 
             height="50px" 
             alignItems="center" 
@@ -21,10 +25,10 @@ export function MenuNav(){
                 justifyContent="flex-start" 
                 spacing={10}
             >
-                <li><Link href='#sobremim'>Sobre</Link></li>
+                <li><Link href='#sobre'>Sobre</Link></li>
                 <li><Link href='#habilidades'>Habilidades</Link></li>
-                <li><Link href='#projetos_profissionais'>Portfólio</Link></li>
-                <li><Link href='#projetos_react'>Contato</Link></li>
+                <li><Link href='#portfolio'>Portfólio</Link></li>
+                <li><Link href='#contato'>Contato</Link></li>
             </HStack>
         </Flex>
     )
