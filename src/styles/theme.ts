@@ -17,14 +17,31 @@ export const theme = extendTheme({
     },
     styles: {
         global: {
+            html: {
+                scrollBehavior: 'smooth'
+            },
             body: {
                 bg: 'dark.800',
                 color: 'light.100'
             },
             ul: {
-                color: 'gold.100',
+                color: 'light.100',
                 listStyleType: 'none',
                 textDecoration: 'none'
+            },
+            section: {
+                width: '100%',
+                maxWidth: '1440px',
+                padding: "64px 0"
+            },
+            a: {
+                _hover: {
+                    textDecoration: 'none',
+                    textDecorationColor: 'transparent'
+                }
+            },
+            h2: {
+                marginBottom: '50px'
             }
         }
     }
