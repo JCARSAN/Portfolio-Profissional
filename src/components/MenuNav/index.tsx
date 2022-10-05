@@ -1,4 +1,5 @@
-import { background, Flex, HStack, Link } from '@chakra-ui/react'
+import { Flex, HStack, Menu, MenuButton, Button, MenuList, MenuItem, Link } from '@chakra-ui/react';
+import { FaBars } from 'react-icons/fa';
 
 type MenuNavprops = {
     isScrolled: boolean;
@@ -11,12 +12,32 @@ export function MenuNav( { isScrolled } : MenuNavprops ){
             width="100%" 
             height="50px" 
             alignItems="center" 
-            justifyContent="center" 
+            justifyContent={{base:"flex-start", md:"center"}}
             zIndex={3}
             position="sticky"
             top={0}
             fontSize="lg"
         >
+            <Flex display={{base:'flex',md:'none'}}>
+                <Menu>
+                    <MenuButton as={Button} 
+                        background="transparent" 
+                        color="#FFF" 
+                        _hover={{backGround:'transparent'}} 
+                        _active={{backGround:'transparent'}} 
+                        outline='none'
+                    >
+                        <FaBars />
+                    </MenuButton>
+                    <MenuList backgroundColor={"dark.800"} color={"light.100"} left="10px" top="-5px">
+                        <MenuItem as={Link} _focus={{backgroundColor:'#fff', color:'#191919', textDecoration:'none'}} onClick={() => { window.scrollTo(0,700) }}>Sobre</MenuItem>
+                        <MenuItem as={Link} _focus={{backgroundColor:'#fff', color:'#191919', textDecoration:'none'}} onClick={() => { window.scrollTo(0,1870) }}>Experiência</MenuItem>
+                        <MenuItem as={Link} _focus={{backgroundColor:'#fff', color:'#191919', textDecoration:'none'}} onClick={() => { window.scrollTo(0,2683) }}>Tecnologias</MenuItem>
+                        <MenuItem as={Link} _focus={{backgroundColor:'#fff', color:'#191919', textDecoration:'none'}} onClick={() => { window.scrollTo(0,3205) }}>Portfólio</MenuItem>
+                        <MenuItem as={Link} _focus={{backgroundColor:'#fff', color:'#191919', textDecoration:'none'}} onClick={() => { window.scrollTo(0,5400) }}>Contato</MenuItem>
+                    </MenuList>
+                </Menu>
+            </Flex>
             <HStack 
                 as="ul" 
                 width="100%" 
@@ -24,9 +45,12 @@ export function MenuNav( { isScrolled } : MenuNavprops ){
                 height="50px"  
                 justifyContent="flex-start" 
                 spacing={10}
+                paddingLeft={{md:'20px'}}
+                display={{base:'none',md:'flex'}}
             >
                 <li><Link href='#sobre'>Sobre</Link></li>
-                <li><Link href='#habilidades'>Habilidades</Link></li>
+                <li><Link href='#experiencia'>Experiência</Link></li>
+                <li><Link href='#tecnologias'>Tecnologias</Link></li>
                 <li><Link href='#portfolio'>Portfólio</Link></li>
                 <li><Link href='#contato'>Contato</Link></li>
             </HStack>

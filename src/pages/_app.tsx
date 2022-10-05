@@ -5,19 +5,9 @@ import "../styles/animations.css";
 
 function MyApp({ Component, pageProps }) {
 
-  const router = useRouter();
-  console.log(router.isReady)
-
-  function handleScroll(){
-    //console.log('Está scrollando!')
-    if(document.documentElement.scrollTop > 500){
-      console.log('500')
-    }
-  }
-
   return (
     <ChakraProvider resetCSS theme={theme}>
-      <Component {...pageProps} /*onScroll={router.isReady? document.onscroll = handleScroll : null}*//>
+      <Component {...pageProps} />
     </ChakraProvider>
   )
 }

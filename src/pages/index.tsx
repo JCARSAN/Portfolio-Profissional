@@ -6,32 +6,22 @@ import { IoLogoJavascript, IoLogoHtml5, IoLogoCss3, IoLogoSass } from 'react-ico
 import { FaReact, FaNode, FaLinkedin, FaInstagram, FaTelegram, FaCopyright } from 'react-icons/fa'
 import { SiTypescript, SiChakraui, SiStyledcomponents, SiRedux, SiJquery, SiNextdotjs } from 'react-icons/si'
 import { Main } from '../components/Main';
+import { Footer } from '../components/Footer';
 
 export default function Home() {
 
   const router = useRouter();
 
-  const [imageVisible,setImageVisible] = useState(true);
-  const [scroll,setScroll] = useState(0);
+  const [isScrolled,setIsScrolled] = useState(false);
+  const [scrollPosition, setScrollPosition] = useState(0);
 
   function handleScroll(){
-    /*
-    if(document.documentElement.scrollTop >= 500){
-      setScroll(1261)
-      document.documentElement.scrollTo(0,1261 - window.innerHeight)
-    }
-    */
-    //document.documentElement.scrollTo(0,scroll)
-    //console.log('Está scrollando!')
-    /*
-    if(document.documentElement.scrollTop >= 500){
-      //setImageVisible(true);
-      
-      document.documentElement.scrollTo(0,1261)
+    if(document.documentElement.scrollTop > 0){
+      setIsScrolled(true);
     }else{
-      //setImageVisible(false);
+      setIsScrolled(false);
     }
-    */
+    setScrollPosition(document.documentElement.scrollTop);
     console.log('Windown Inner Height: ',window.innerHeight)
     console.log('Top position: ',document.documentElement.scrollTop)
   }
@@ -45,8 +35,9 @@ export default function Home() {
       height="auto"
       onScroll={router.isReady? document.onscroll = handleScroll : null}
     >
-      <MenuNav />
-      <Main /> 
+      <MenuNav isScrolled={isScrolled} />
+      <Main scrollPosition={scrollPosition}/>
+      <Footer /> 
     </VStack>
   )
   

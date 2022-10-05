@@ -1,11 +1,30 @@
 import { Divider, VStack } from "@chakra-ui/react";
+import { Contato } from "./Contato";
+import { Experiencia } from "./Experiencia";
+import { Tecnologias } from "./Tecnologias";
 import { Header } from "./Header";
+import { Portfolio } from "./Portfolio";
+import { Sobre } from "./Sobre";
 
-export function Main(){
+type MainProps = {
+    scrollPosition: number;
+}
+
+export function Main( { scrollPosition }: MainProps){
     return(
         <VStack as="main" width="100%" alignItems="center" justifyContent="flex-start">
             <Header />
+            <Divider backgroundColor="light.100"/>
+            <Sobre scrollPosition={scrollPosition}/>
             <Divider backgroundColor="light.100"/> 
+            <Experiencia scrollPosition={scrollPosition}/>
+            <Divider backgroundColor="light.100"/>
+            <Tecnologias scrollPosition={scrollPosition}/>
+            <Divider backgroundColor="light.100"/>
+            <Portfolio scrollPosition={scrollPosition} />
+            <Divider backgroundColor="light.100"/> 
+            <Contato scrollPosition={scrollPosition}/>
+            <Divider backgroundColor="light.100"/>
         </VStack>
     )
 }
