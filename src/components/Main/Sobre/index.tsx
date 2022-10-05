@@ -3,12 +3,14 @@ import { useState } from "react";
 
 type AboutProps = {
     scrollPosition: number;
+    deviceHeight: number;
 }
 
-export function Sobre({ scrollPosition }: AboutProps){
+export function Sobre({ scrollPosition, deviceHeight }: AboutProps){
     const [animated,setAnimated] = useState(false);
-
-    if(!animated && scrollPosition >= 200){
+    //const [animationPosition,setAnimationPosition] = useState(0);
+    
+    if(!animated && scrollPosition >= 500){
         setAnimated(true);
     }
 

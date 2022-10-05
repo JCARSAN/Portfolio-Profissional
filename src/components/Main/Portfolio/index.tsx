@@ -16,9 +16,9 @@ export function Portfolio({ scrollPosition } : PortFolioProps){
     return(
         <VStack as="section" id="portfolio" alignItems={{base:"center", md:"flex-start"}}>
             <Heading as="h2">Portfólio</Heading>
-            <Flex overflow="hidden">
-                
-                <SimpleGrid columns={{lg:3,md:1}} spacing={10} marginLeft={animated? 0 : '-500%'} className={animated? 'grow-up' : ''} margin="auto" width={{base:'90%',lg:'100%'}}>
+            <Flex overflow="hidden" width="100%">
+                <Flex marginLeft={animated? 0 : '-500%'} className={animated? 'grow-up' : ''}>  
+                <SimpleGrid columns={{lg:3,md:1}} spacing={10} margin="auto" width={{base:'95%',lg:'100%'}}>
                     <PortfolioWork 
                         title={"VideoConferênciaApp"} 
                         src={"/images/videoconferenciaapp.png"} 
@@ -38,7 +38,7 @@ export function Portfolio({ scrollPosition } : PortFolioProps){
                         linkRepository={"https://github.com/JCARSAN/blog-react-rocketseat"} 
                     />
                 </SimpleGrid>
-                
+                </Flex>  
                 {/*
                 <PortfolioWork 
                         title={"VideoConferênciaApp"} 

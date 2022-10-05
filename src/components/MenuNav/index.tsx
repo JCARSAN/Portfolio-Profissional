@@ -30,11 +30,11 @@ export function MenuNav( { isScrolled } : MenuNavprops ){
                         <FaBars />
                     </MenuButton>
                     <MenuList backgroundColor={"dark.800"} color={"light.100"} left="10px" top="-5px">
-                        <MenuItem as={Link} _focus={{backgroundColor:'#fff', color:'#191919', textDecoration:'none'}} onClick={() => { window.scrollTo(0,767) }}>Sobre</MenuItem>
-                        <MenuItem as={Link} _focus={{backgroundColor:'#fff', color:'#191919', textDecoration:'none'}} onClick={() => { window.scrollTo(0,1987) }}>Experiência</MenuItem>
-                        <MenuItem as={Link} _focus={{backgroundColor:'#fff', color:'#191919', textDecoration:'none'}} onClick={() => { window.scrollTo(0,2800) }}>Tecnologias</MenuItem>
-                        <MenuItem as={Link} _focus={{backgroundColor:'#fff', color:'#191919', textDecoration:'none'}} onClick={() => { window.scrollTo(0,3614) }}>Portfólio</MenuItem>
-                        <MenuItem as={Link} _focus={{backgroundColor:'#fff', color:'#191919', textDecoration:'none'}} onClick={() => { window.scrollTo(0,6010) }}>Contato</MenuItem>
+                        <MenuItem as={Link} _focus={{backgroundColor:'#fff', color:'#191919', textDecoration:'none'}} onClick={() => { window.scrollTo(0,726) }}>Sobre</MenuItem>
+                        <MenuItem as={Link} _focus={{backgroundColor:'#fff', color:'#191919', textDecoration:'none'}} onClick={() => { window.scrollTo(0,2126) }}>Experiência</MenuItem>
+                        <MenuItem as={Link} _focus={{backgroundColor:'#fff', color:'#191919', textDecoration:'none'}} onClick={() => { window.scrollTo(0,3110) }}>Tecnologias</MenuItem>
+                        <MenuItem as={Link} _focus={{backgroundColor:'#fff', color:'#191919', textDecoration:'none'}} onClick={() => { window.scrollTo(0,3765) }}>Portfólio</MenuItem>
+                        <MenuItem as={Link} _focus={{backgroundColor:'#fff', color:'#191919', textDecoration:'none'}} onClick={() => { window.scrollTo(0,6265) }}>Contato</MenuItem>
                     </MenuList>
                 </Menu>
             </Flex>

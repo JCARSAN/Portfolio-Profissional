@@ -8,14 +8,16 @@ import { Sobre } from "./Sobre";
 
 type MainProps = {
     scrollPosition: number;
+    deviceHeight: number;
 }
 
-export function Main( { scrollPosition }: MainProps){
+export function Main( { scrollPosition,deviceHeight }: MainProps){
+    //console.log("Device Height Main Contatiner: ",deviceHeight)
     return(
         <VStack as="main" width="100%" alignItems="center" justifyContent="flex-start">
             <Header />
             <Divider backgroundColor="light.100"/>
-            <Sobre scrollPosition={scrollPosition}/>
+            <Sobre scrollPosition={scrollPosition} deviceHeight={deviceHeight}/>
             <Divider backgroundColor="light.100"/> 
             <Experiencia scrollPosition={scrollPosition}/>
             <Divider backgroundColor="light.100"/>
