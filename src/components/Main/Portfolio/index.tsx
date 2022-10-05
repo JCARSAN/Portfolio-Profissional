@@ -16,10 +16,10 @@ export function Portfolio({ scrollPosition } : PortFolioProps){
     }
 
     return(
-        <VStack as="section" id="portfolio" alignItems="flex-start" padding={{base:"64px 25px"}}>
-            <Heading as="h2">Portfólio</Heading>
+        <VStack as="section" id="portfolio" alignItems="flex-start">
+            <Heading as="h2" marginLeft={{base:"8px"}}>Portfólio</Heading>
             <Flex overflow="hidden">
-                <SimpleGrid columns={{lg:3,md:1}} spacing={10} marginLeft={animated? 0 : '-500%'} className={animated? 'grow-up' : ''}>
+                <SimpleGrid columns={{lg:3,md:1}} padding={{base:"0 8px"}} spacing={10} marginLeft={animated? 0 : '-500%'} className={animated? 'grow-up' : ''}>
                     <PortfolioWork 
                         title={"VideoConferênciaApp"} 
                         src={"/images/videoconferenciaapp.png"} 

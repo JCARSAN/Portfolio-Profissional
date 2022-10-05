@@ -33,19 +33,19 @@ export function Tecnologias({scrollPosition} : HabilityProps){
             <Heading as="h2">Tecnologias que utilizo.</Heading>
             <SimpleGrid row={2} spacing="32px" width="100%" overflow="hidden">
                 <Text fontSize="1.1rem">Clique no ícone para saber mais informações.</Text>
-                <SimpleGrid columns={2} marginLeft={animated?'0':'-100%'} className={animated? 'grow-right' : ''}>
+                <SimpleGrid columns={{base:1, md:2}} marginLeft={animated?'0':'-100%'} className={animated? 'grow-right' : ''}>
                     <SimpleGrid columns={{base:2,md:3}} maxWidth={500} spacing={25}>
-                        <Flex backgroundColor="#F0CA65" color="#191919" padding="10px" justifyContent="center" textAlign="center" cursor="pointer" id="0" onClick={(event) => { handleBoxHability("Criação de SPAs (Simple Pages Application) usando React, NextJs, Typescript e Sass, Chackra UI ou Styled-Components para estilização.",event.currentTarget.id); event.currentTarget.classList.add('clicked'); }}>
+                        <Flex backgroundColor="#F0CA65" width="150px" height="150px" color="#191919" padding="10px" justifyContent="center" textAlign="center" cursor="pointer" id="0" onClick={(event) => { handleBoxHability("Criação de SPAs (Simple Pages Application) usando React, NextJs, Typescript e Sass, Chackra UI ou Styled-Components para estilização.",event.currentTarget.id); event.currentTarget.classList.add('clicked'); }}>
                             <BoxHability srcIcon={"/images/react.png"} technology={"React"} />
                         </Flex>
-                        <Flex backgroundColor="#F0CA65" color="#191919" padding="10px" justifyContent="center" textAlign="center" cursor="pointer" id="1" onClick={(event) => { handleBoxHability("Criação de APIs, consultas no banco de dados usando Prisma usando NodeJs.",event.currentTarget.id); event.currentTarget.classList.add('clicked')}}>
+                        <Flex backgroundColor="#F0CA65" width="150px" height="150px" color="#191919" padding="10px" justifyContent="center" textAlign="center" cursor="pointer" id="1" onClick={(event) => { handleBoxHability("Criação de APIs, consultas no banco de dados usando Prisma usando NodeJs.",event.currentTarget.id); event.currentTarget.classList.add('clicked')}}>
                             <BoxHability srcIcon={"/images/node.png"} technology={"Node"} />
                         </Flex>
-                        <Flex backgroundColor="#F0CA65" color="#191919" padding="10px" justifyContent="center" textAlign="center" cursor="pointer" id="2" onClick={(event) => { handleBoxHability("Criação de aplicativos multiplataforma para smartphones usando React Native.",event.currentTarget.id); event.currentTarget.classList.add('clicked')}}>
+                        <Flex backgroundColor="#F0CA65" width="150px" height="150px" color="#191919" padding="10px" justifyContent="center" textAlign="center" cursor="pointer" id="2" onClick={(event) => { handleBoxHability("Criação de aplicativos multiplataforma para smartphones usando React Native.",event.currentTarget.id); event.currentTarget.classList.add('clicked')}}>
                             <BoxHability srcIcon={"/images/reactnative.png"} technology={"React Native"} />
                         </Flex>
                     </SimpleGrid>
-                    <Text color="#FFF" marginLeft={{base:'15px', md:'15px'}}>{descriptionText}</Text>
+                    <Text color="#FFF" margin="64px 0">{descriptionText}</Text>
                 </SimpleGrid>
             </SimpleGrid>
             { /*

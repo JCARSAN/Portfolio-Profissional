@@ -21,7 +21,7 @@ export function Contato({scrollPosition} : ContactProps){
                     <Text fontSize="1.25rem" marginBottom="64px">Deseja construir um site ou um app? Entre em contato comigo!</Text>
                     <HStack width="100%" alignItems="flex-start" spacing={10}>
                         <Image src="/images/iphone-edit.png" width={100}/>
-                        <VStack alignItems="flex-start" lineHeight={2} fontSize="1.25rem" height={200}>
+                        <VStack alignItems="flex-start" lineHeight={2} fontSize="1.25rem">
                             <Text>E-mail: jcarsan1000@gmail.com</Text>
                             <Text>Whatsapp: (21)99205-6323</Text>
                             <HStack fontSize="2rem" width="100%" spacing={30}>

@@ -1,4 +1,4 @@
-import { VStack, Flex, Text, Box, Heading, Image, HStack } from '@chakra-ui/react'
+import { VStack, Flex, Text, Box, Heading, Image, HStack, Spinner } from '@chakra-ui/react'
 import { MenuNav } from '../components/MenuNav'
 import { useRouter } from 'next/router'
 import { useState } from 'react';
@@ -19,8 +19,6 @@ export default function Home() {
       setIsScrolled(false);
     }
     setScrollPosition(document.documentElement.scrollTop);
-    console.log('Windown Inner Height: ',window.innerHeight)
-    console.log('Top position: ',document.documentElement.scrollTop)
   }
 
   return (

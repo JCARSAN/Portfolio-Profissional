@@ -34,15 +34,15 @@ export function Experiencia({ scrollPosition } : ExperienciaProps){
                                 <Text fontSize="1.25rem" marginBottom="25px">Descrição: </Text>
                                 <List spacing={3}>
                                     <ListItem display="flex" alignItems="center">
-                                        <ListItem as={BiRightArrow} color="#F0CA65" marginRight={2} width={9}/> 
+                                        <ListItem as={BiRightArrow} color="#F0CA65" marginRight={2} width="40px"/> 
                                         Manutenção dos sites dos clientes da agência, fazendo alterações no HTML, CSS e Javascript conforme solicitação dos clientes.
                                     </ListItem>
                                     <ListItem display="flex" alignItems="center">
-                                        <ListItem as={BiRightArrow} color="#F0CA65" marginRight={2} width={9}/> 
+                                        <ListItem as={BiRightArrow} color="#F0CA65" marginRight={2} width="40px"/> 
                                         Criação de sites estáticos utilizando HTML, CSS e Javascript conforme layout desenvolvido pela equipe de Design.
                                     </ListItem>
                                     <ListItem display="flex" alignItems="center">
-                                        <ListItem as={BiRightArrow} color="#F0CA65" marginRight={2} width={9}/> 
+                                        <ListItem as={BiRightArrow} color="#F0CA65" marginRight={2} width="40px"/> 
                                         Modelagem de telas de aplicativos Web e Mobile usando Mockups.
                                     </ListItem>
                                 </List>
@@ -55,15 +55,15 @@ export function Experiencia({ scrollPosition } : ExperienciaProps){
                                 <Text fontSize="1.25rem" marginBottom="25px">Descrição: </Text>
                                 <List spacing={3}>
                                     <ListItem display="flex" alignItems="center">
-                                        <ListItem as={BiRightArrow} color="#F0CA65" marginRight={2} width={9}/> 
+                                        <ListItem as={BiRightArrow} color="#F0CA65" marginRight={2} width="40px"/> 
                                         Criação de funcionalidades no sistema de gestão de crédito imobiliário da empresa usando Delphi e SQL. 
                                     </ListItem>
                                     <ListItem display="flex" alignItems="center">
-                                        <ListItem as={BiRightArrow} color="#F0CA65" marginRight={2} width={9}/> 
+                                        <ListItem as={BiRightArrow} color="#F0CA65" marginRight={2} width="40px"/> 
                                         Consulta e manipulação de dados com Oracle Database e Microsoft SQL Server.
                                     </ListItem>
                                     <ListItem display="flex" alignItems="center">
-                                        <ListItem as={BiRightArrow} color="#F0CA65" marginRight={2} width={9}/> 
+                                        <ListItem as={BiRightArrow} color="#F0CA65" marginRight={2} width="40px"/> 
                                         Criação de telas usando XML conforme layout definido pela equipe de Design.
                                     </ListItem>
                                 </List>
@@ -76,7 +76,7 @@ export function Experiencia({ scrollPosition } : ExperienciaProps){
                                 <Text fontSize="1.25rem" marginBottom="25px">Descrição: </Text>
                                 <List spacing={3}>
                                     <ListItem display="flex" alignItems="center">
-                                        <ListItem as={BiRightArrow} color="#F0CA65" marginRight={2} width={9}/> 
+                                        <ListItem as={BiRightArrow} color="#F0CA65" marginRight={2} width="40px"/> 
                                         Criação de um aplicativo de videoconferência usando NodeJs no backend, HTML, CSS e JavaScript e WebRTC no frontend.
                                     </ListItem>
                                 </List>
