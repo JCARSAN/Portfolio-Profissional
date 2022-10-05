@@ -9,7 +9,7 @@ type PortFolioProps = {
 export function Portfolio({ scrollPosition } : PortFolioProps){
     const [animated,setAnimated] = useState(false);
 
-    if(!animated && scrollPosition >= 1800){
+    if(!animated && scrollPosition >= 1700){
         setAnimated(true);
     }
 
