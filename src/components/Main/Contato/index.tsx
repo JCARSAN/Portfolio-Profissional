@@ -7,7 +7,6 @@ type ContactProps = {
 }
 
 export function Contato({scrollPosition} : ContactProps){
-    //console.log('Section Contato: ',props.scrollPosition)
     const [animated,setAnimated] = useState(false);
 
     if(!animated && scrollPosition >= 2454){

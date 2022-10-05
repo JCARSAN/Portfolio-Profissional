@@ -2,9 +2,6 @@ import { VStack, Flex, Text, Box, Heading, Image, HStack } from '@chakra-ui/reac
 import { MenuNav } from '../components/MenuNav'
 import { useRouter } from 'next/router'
 import { useState } from 'react';
-import { IoLogoJavascript, IoLogoHtml5, IoLogoCss3, IoLogoSass } from 'react-icons/io'
-import { FaReact, FaNode, FaLinkedin, FaInstagram, FaTelegram, FaCopyright } from 'react-icons/fa'
-import { SiTypescript, SiChakraui, SiStyledcomponents, SiRedux, SiJquery, SiNextdotjs } from 'react-icons/si'
 import { Main } from '../components/Main';
 import { Footer } from '../components/Footer';
 

@@ -6,7 +6,6 @@ type AboutProps = {
 }
 
 export function Sobre({ scrollPosition }: AboutProps){
-    console.log('Sobre: ',scrollPosition);
     const [animated,setAnimated] = useState(false);
 
     if(!animated && scrollPosition >= 200){
@@ -28,7 +27,7 @@ export function Sobre({ scrollPosition }: AboutProps){
                         <VStack padding="0 32px" alignItems="flex-start">
                             <Text>
                                 Meu nome é Júlio Cardoso dos Santos. Minha jornada no mundo da programação começou em 2015 quando 
-                                escrevi um código pela primeira vez, um System.out.println('Olá mundo!') com Java e a partir desse
+                                escrevi um código pela primeira vez, um System.out.println(&#39;Olá mundo!&#39;) com Java e a partir desse
                                 momento eu me encantei com o mundo da programação. 
                             </Text>
                             <Text>
