@@ -29,7 +29,7 @@ export function Tecnologias({scrollPosition} : HabilityProps){
     }
 
     return(
-        <VStack as="section" id="tecnologias" width="100%" alignItems="flex-start" padding={{base:"64px 25px",md:"64px 25px"}}>
+        <VStack as="section" id="tecnologias" width="100%" alignItems={{base:"center", md:"flex-start"}} padding={{base:"64px 25px",md:"64px 25px"}}>
             <Heading as="h2">Tecnologias que utilizo.</Heading>
             <SimpleGrid row={2} spacing="32px" width="100%" overflow="hidden">
                 <Text fontSize="1.1rem">Clique no ícone para saber mais informações.</Text>

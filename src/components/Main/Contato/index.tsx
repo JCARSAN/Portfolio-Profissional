@@ -14,7 +14,7 @@ export function Contato({scrollPosition} : ContactProps){
     }
 
     return(
-        <VStack as="section" id="contato" width="100%" alignItems="flex-start" padding={{base:'64px 25px'}}>
+        <VStack as="section" id="contato" width="100%" alignItems={{base:"center", md:"flex-start"}} padding={{base:'64px 25px'}}>
             <Heading as="h2">Contato</Heading>
             <VStack alignItems="flex-start" width="100%" maxWidth={1440} overflow="hidden">
                 <VStack width="100%" maxWidth={1440} spacing={5} marginLeft={animated?'0':'-100%'} className={animated? 'show-element' : ''} alignItems="flex-start">

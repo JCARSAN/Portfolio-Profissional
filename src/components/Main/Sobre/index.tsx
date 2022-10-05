@@ -13,7 +13,7 @@ export function Sobre({ scrollPosition }: AboutProps){
     }
 
     return(
-        <VStack as="section" id="sobre" alignItems='flex-start' padding={{base:'64px 25px', md:'64px 25px'}}>
+        <VStack as="section" id="sobre" alignItems={{base:"center", md:"flex-start"}} padding={{base:'64px 25px', md:'64px 25px'}}>
             <Heading marginBottom={50}>Sobre</Heading>
             <HStack width="100%" justifyContent="space-between" overflow="hidden">
                 <HStack 

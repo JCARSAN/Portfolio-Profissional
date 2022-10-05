@@ -16,7 +16,7 @@ export function Experiencia({ scrollPosition } : ExperienciaProps){
     }
 
     return(
-        <VStack as="section" id="experiencia" alignItems="flex-start" padding={{base:"64px 25px"}}>
+        <VStack as="section" id="experiencia" alignItems={{base:"center", md:"flex-start"}} padding={{base:"64px 25px"}}>
             <Heading as="h2">Onde trabalhei?</Heading>
             <HStack width="100%" overflow="hidden">
                 <Tabs variant='enclosed' width="100%" marginLeft={animated?'0':'-100%'} className={animated? 'grow-right' : ''} >
