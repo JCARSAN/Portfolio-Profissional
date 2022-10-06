@@ -5,14 +5,18 @@ import { useRouter } from 'next/router'
 import { useState } from 'react';
 import { Main } from '../components/Main';
 import { Footer } from '../components/Footer';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export default function Home() {
 
   const router = useRouter();
 
+  if(router.isReady) {
+    AOS.init();
+  }
+
   const [isScrolled,setIsScrolled] = useState(false);
-  const [scrollPosition, setScrollPosition] = useState(0);
-  const [windowInnerHeight,setWindowInnerHeight] = useState(0);
   
   function handleScroll(){
     if(document.documentElement.scrollTop > 0){
@@ -20,7 +24,6 @@ export default function Home() {
     }else{
       setIsScrolled(false);
     }
-    setScrollPosition(document.documentElement.scrollTop);
   }
 
   return (
@@ -37,7 +40,7 @@ export default function Home() {
         <title>Júlio C. Santos | Desenvolvedor Front-End</title>
       </Head>
       <MenuNav isScrolled={isScrolled} />
-      <Main scrollPosition={scrollPosition} deviceHeight={router.isReady ? window.innerHeight : 0}/>
+      <Main />
       <Footer /> 
     </VStack>
   )

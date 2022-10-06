@@ -9,7 +9,7 @@ interface PortfolioWorkProps {
 
 export function PortfolioWork( {title,src,description,linkRepository} : PortfolioWorkProps){
     return(
-        <VStack alignItems="flex-start" backgroundColor="#FFF" color="#191919" padding="25px" spacing={5} minHeight={{base:'725px'}}>
+        <VStack alignItems="flex-start" backgroundColor="#FFF" color="#191919" padding="25px" spacing={5} minHeight={{base:'725px'}} data-aos="fade-right">
             <Heading as="h3" fontSize="1.5rem">Projeto: {title}</Heading>
             <Image src={src} height="225px" minHeight="225px" width="100%" marginBottom="10px"/>
             <VStack height="300px" justifyContent="space-between" alignItems="flex-start">

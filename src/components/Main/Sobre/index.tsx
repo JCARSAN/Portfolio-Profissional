@@ -1,31 +1,18 @@
 import { Heading, HStack, VStack, Image, Text, Flex } from "@chakra-ui/react";
-import { useState } from "react";
 
-type AboutProps = {
-    scrollPosition: number;
-    animationPosition: number;
-}
-
-export function Sobre({ scrollPosition, animationPosition }: AboutProps){
-    const [animated,setAnimated] = useState(false);
-    /*
-    if(!animated && scrollPosition >= animationPosition){
-        setAnimated(true);
-    }
-    */
+export function Sobre(){
     return(
-        <VStack as="section" id="sobre" alignItems={{base:"center", md:"flex-start"}} padding={{base:'64px 25px', md:'64px 25px'}}>
-            <Heading marginBottom={50}>Sobre</Heading>
+        <VStack as="section" id="sobre" alignItems={{base:"center", md:"center"}} justifyContent="space-between" padding={{base:"32px 16px",lg:"32px 16px"}} minHeight="100vh" data-aos="fade-right">
+            <Heading>Sobre</Heading>
             <HStack width="100%" justifyContent="space-between" overflow="hidden">
                 <HStack 
                     width="100%" 
-                    /*marginLeft={animated?'0':'-100%'} 
-                    className={animated? 'grow-right' : ''} */
                     flexDirection={{base:'column-reverse', md:'column-reverse', lg:'row'}}
+
                 >
-                    <Flex alignItems="center" paddingTop={{base: '32px',md:'32px'}} flexDirection={{base: 'column',lg: 'row'}}>
-                        <Image src="/images/foto.jpg" alt="Júlio Cardoso dos Santos" boxSize="125px" borderRadius="full" margin={{base:'32px 0'}}/>
-                        <VStack padding="0 32px" alignItems="flex-start">
+                    <Flex alignItems="center" flexDirection={{base: 'column',lg: 'row'}} >
+                        <Image src="/images/foto.jpg" alt="Júlio Cardoso dos Santos" boxSize="100px" borderRadius="full" marginBottom={{base:"32px",lg:0}} />
+                        <VStack padding="0 32px" alignItems="flex-start" justifyContent="space-between" fontSize="1rem">
                             <Text>
                                 Meu nome é Júlio Cardoso dos Santos. Minha jornada no mundo da programação começou em 2015 quando 
                                 escrevi um código pela primeira vez, um System.out.println(&#39;Olá mundo!&#39;) com Java e a partir desse
@@ -44,10 +31,9 @@ export function Sobre({ scrollPosition, animationPosition }: AboutProps){
                             </Text>
                         </VStack>
                     </Flex>
-                    <Image src="/images/lampada2.svg" alt="Criatividade é a minha marca!" width="150px" height="150px" />
                 </HStack>
-                
             </HStack>
+            <Image src="/images/lampada2.svg" alt="Criatividade é a minha marca!" height="10vh" />
         </VStack>
     )
 }

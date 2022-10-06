@@ -7,13 +7,14 @@ import { Portfolio } from "./Portfolio";
 import { Sobre } from "./Sobre";
 import { useState } from "react";
 
+/*
 type MainProps = {
     scrollPosition: number;
     deviceHeight: number;
 }
-
-export function Main( { scrollPosition,deviceHeight }: MainProps){
-    const [device,setDevice] = useState('')
+*/
+export function Main( /*{ scrollPosition,deviceHeight }: MainProps */){
+    //const [device,setDevice] = useState('')
 
     //console.log("Device Height Main Container: ",deviceHeight);
     /*
@@ -30,6 +31,7 @@ export function Main( { scrollPosition,deviceHeight }: MainProps){
         }
     }
     */
+   /*
     function handleAnimationPosition(deviceHeight: number, section: string){
         let positions = {
             'sobre': {'smartphone': 720, 'notebook': 476},
@@ -44,20 +46,20 @@ export function Main( { scrollPosition,deviceHeight }: MainProps){
            return positions[section]['notebook']; 
         }
     }
-
+ */
     return(
         <VStack as="main" width="100%" alignItems="center" justifyContent="flex-start">
             <Header />
             <Divider backgroundColor="light.100"/>
-            <Sobre scrollPosition={scrollPosition} animationPosition={handleAnimationPosition(deviceHeight,'sobre')} />
+            <Sobre /*scrollPosition={scrollPosition} animationPosition={handleAnimationPosition(deviceHeight,'sobre')} */ />
             <Divider backgroundColor="light.100"/> 
-            <Experiencia scrollPosition={scrollPosition} animationPosition={handleAnimationPosition(deviceHeight,'experiencia')} />
+            <Experiencia /*scrollPosition={scrollPosition} animationPosition={handleAnimationPosition(deviceHeight,'experiencia')} */ />
             <Divider backgroundColor="light.100"/>
-            <Tecnologias scrollPosition={scrollPosition} animationPosition={handleAnimationPosition(deviceHeight,'tecnologias')} />
+            <Tecnologias /*scrollPosition={scrollPosition} animationPosition={handleAnimationPosition(deviceHeight,'tecnologias')} */ />
             <Divider backgroundColor="light.100"/>
-            <Portfolio scrollPosition={scrollPosition} animationPosition={handleAnimationPosition(deviceHeight,'portfolio')} />
+            <Portfolio /*scrollPosition={scrollPosition} animationPosition={handleAnimationPosition(deviceHeight,'portfolio')} *//>
             <Divider backgroundColor="light.100"/> 
-            <Contato scrollPosition={scrollPosition} animationPosition={handleAnimationPosition(deviceHeight,'contato')} />
+            <Contato /* scrollPosition={scrollPosition} animationPosition={handleAnimationPosition(deviceHeight,'contato')} *//>
             <Divider backgroundColor="light.100"/>
         </VStack>
     )

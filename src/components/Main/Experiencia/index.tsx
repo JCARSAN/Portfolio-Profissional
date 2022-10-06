@@ -1,26 +1,13 @@
 import { Heading, ListItem, Tab, TabList, TabPanel, TabPanels, Tabs, UnorderedList, List, VStack, Text, HStack } from "@chakra-ui/react";
-import { useState } from "react";
 import { Icon } from '@chakra-ui/react'
 import { BiRightArrow } from 'react-icons/bi';
 
-type ExperienciaProps = {
-    scrollPosition: number;
-    animationPosition: number;
-}
-
-export function Experiencia({ scrollPosition, animationPosition } : ExperienciaProps){
-
-    const [animated,setAnimated] = useState(false);
-    /*
-    if(!animated && scrollPosition >= animationPosition){
-        setAnimated(true);
-    }
-    */
+export function Experiencia(){
     return(
-        <VStack as="section" id="experiencia" alignItems={{base:"center", md:"flex-start"}}>
-            <Heading as="h2">Onde trabalhei?</Heading>
+        <VStack as="section" id="experiencia" alignItems={{base:"center", md:"center", lg:"flex-start"}} justifyContent="space-around" data-aos="fade-right" minHeight="100vh" padding="0 16px">
+            <Heading as="h2" marginBottom={16}>Onde trabalhei?</Heading>
             <HStack width="100%" overflow="hidden">
-                <Tabs variant='enclosed' width="100%" /*marginLeft={animated?'0':'-100%'} className={animated? 'grow-right' : ''}*/ >
+                <Tabs variant='enclosed' width="100%">
                     <TabList>
                         <Tab backgroundColor="#F0CA65" color="#191919" _selected={{color:'#191919', backgroundColor:'#FFF'}}fontSize={{base:'0.9rem'}}>Agência Clicksoft</Tab>
                         <Tab backgroundColor="#F0CA65" color="#191919" _selected={{color:'#191919', backgroundColor:'#FFF'}} margin="0 5px" fontSize={{base:'0.9rem'}}>Prognum Informática</Tab>

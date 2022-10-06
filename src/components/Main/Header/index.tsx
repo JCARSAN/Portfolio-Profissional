@@ -2,7 +2,7 @@ import { Box, Flex, Heading, HStack, VStack, Image, Link, Text } from "@chakra-u
 
 export function Header(){
     return(
-        <VStack as="section" spacing={{base:39, md:39, lg: 25}} alignItems={{base:'center', md:'center', lg:'flex-start'}}>
+        <VStack as="section" spacing={{base:39, md:39, lg: 25}} alignItems={{base:'center', md:'center', lg:'flex-start'}} justifyContent="center" padding={{lg:"65px 25px"}} minHeight="100vh">
             <HStack width="100%" justifyContent="space-between" flexWrap="wrap">
                 <Heading lineHeight={1.6} width={{base:'100%', md:'100%', lg:'50%' }} textAlign={{base:'center',md:'center', lg:'left'}}>
                     Júlio C. Santos <br />
