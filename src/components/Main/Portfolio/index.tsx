@@ -9,16 +9,16 @@ type PortFolioProps = {
 
 export function Portfolio({ scrollPosition, animationPosition } : PortFolioProps){
     const [animated,setAnimated] = useState(false);
-
+    /*
     if(!animated && scrollPosition >= animationPosition){
         setAnimated(true);
     }
-
+    */
     return(
         <VStack as="section" id="portfolio" alignItems={{base:"center", md:"flex-start"}}>
             <Heading as="h2">Portfólio</Heading>
             <Flex overflow="hidden" width="100%">
-                <Flex marginLeft={animated? 0 : '-500%'} className={animated? 'grow-up' : ''}>  
+                <Flex /*marginLeft={animated? 0 : '-500%'} className={animated? 'grow-up' : ''}*/>  
                 <SimpleGrid columns={{lg:3,md:1}} spacing={10} margin="auto" width={{base:'95%',lg:'100%'}}>
                     <PortfolioWork 
                         title={"VideoConferênciaApp"} 

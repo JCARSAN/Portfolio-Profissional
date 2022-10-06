@@ -9,16 +9,16 @@ type ContactProps = {
 
 export function Contato({scrollPosition, animationPosition} : ContactProps){
     const [animated,setAnimated] = useState(false);
-
+    /*
     if(!animated && scrollPosition >= animationPosition){
         setAnimated(true);
     }
-
+    */
     return(
         <VStack as="section" id="contato" width="100%" alignItems={{base:"center", md:"flex-start"}} padding={{base:'64px 10px'}}>
             <Heading as="h2">Contato</Heading>
             <VStack alignItems="flex-start" width="100%" maxWidth={1440} overflow="hidden">
-                <VStack width="100%" maxWidth={1440} spacing={10} marginLeft={animated?'0':'-100%'} className={animated? 'show-element' : ''} alignItems={{base:'center', md:'flex-start'}}>
+                <VStack width="100%" maxWidth={1440} spacing={10} /*marginLeft={animated?'0':'-100%'} className={animated? 'show-element' : ''} */alignItems={{base:'center', md:'flex-start'}}>
                     <Text fontSize="1.25rem" textAlign={{base:'center',md:'left'}}>Deseja construir um site ou um app? Entre em contato comigo!</Text>
                     <Link
                         href="mailto:jcarsan1000@gmail.com"

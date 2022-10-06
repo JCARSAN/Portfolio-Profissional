@@ -13,14 +13,15 @@ export function Tecnologias({scrollPosition, animationPosition} : HabilityProps)
     const [descriptionText,setDescriptionText] = useState('');
 
     //console.log('Scroll Top: ',scrollPosition);
-    //console.log('Tamanho da janela: ',window.innerHeight);
-    //console.log('Outher height: ',window.outerHeight);
+    //console.log('Tecnologias Animation position: ',animationPosition)
 
     const [animated,setAnimated] = useState(false);
-
+    /*
     if(!animated && scrollPosition >= animationPosition){
         setAnimated(true);
     }
+    */
+    
 
     function handleBoxHability(text:string, id:string){
         setDescriptionText(text);
@@ -37,7 +38,7 @@ export function Tecnologias({scrollPosition, animationPosition} : HabilityProps)
             <Heading as="h2">Tecnologias que utilizo.</Heading>
             <SimpleGrid row={2} spacing="32px" width="100%" overflow="hidden">
                 <Text fontSize="1.1rem">Clique no ícone para saber mais informações.</Text>
-                <SimpleGrid marginLeft={animated?'0':'-100%'} className={animated? 'grow-right' : ''}>
+                <SimpleGrid /*marginLeft={animated?'0':'-100%'} className={animated? 'grow-right' : ''} */>
                     <Text color="#FFF" margin="64px 0">{descriptionText}</Text>
                     <SimpleGrid columns={{base:1,md:3}} maxWidth={500} spacing={25} margin={{base:'auto',md:'0'}}>
                         <Flex backgroundColor="#F0CA65" width="150px" height="150px" color="#191919" padding="10px" justifyContent="center" textAlign="center" cursor="pointer" id="0" onClick={(event) => { handleBoxHability("Criação de SPAs (Simple Pages Application) usando React, NextJs, Typescript e Sass, Chackra UI ou Styled-Components para estilização.",event.currentTarget.id); event.currentTarget.classList.add('clicked'); }}>

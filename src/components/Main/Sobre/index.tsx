@@ -8,19 +8,19 @@ type AboutProps = {
 
 export function Sobre({ scrollPosition, animationPosition }: AboutProps){
     const [animated,setAnimated] = useState(false);
-
+    /*
     if(!animated && scrollPosition >= animationPosition){
         setAnimated(true);
     }
-
+    */
     return(
         <VStack as="section" id="sobre" alignItems={{base:"center", md:"flex-start"}} padding={{base:'64px 25px', md:'64px 25px'}}>
             <Heading marginBottom={50}>Sobre</Heading>
             <HStack width="100%" justifyContent="space-between" overflow="hidden">
                 <HStack 
                     width="100%" 
-                    marginLeft={animated?'0':'-100%'} 
-                    className={animated? 'grow-right' : ''} 
+                    /*marginLeft={animated?'0':'-100%'} 
+                    className={animated? 'grow-right' : ''} */
                     flexDirection={{base:'column-reverse', md:'column-reverse', lg:'row'}}
                 >
                     <Flex alignItems="center" paddingTop={{base: '32px',md:'32px'}} flexDirection={{base: 'column',lg: 'row'}}>
