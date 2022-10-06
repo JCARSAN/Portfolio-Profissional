@@ -4,12 +4,13 @@ import { FaInstagram, FaLinkedin, FaTelegram } from "react-icons/fa";
 
 type ContactProps = {
     scrollPosition: number;
+    animationPosition: number
 }
 
-export function Contato({scrollPosition} : ContactProps){
+export function Contato({scrollPosition, animationPosition} : ContactProps){
     const [animated,setAnimated] = useState(false);
 
-    if(!animated && scrollPosition >= 2454){
+    if(!animated && scrollPosition >= animationPosition){
         setAnimated(true);
     }
 

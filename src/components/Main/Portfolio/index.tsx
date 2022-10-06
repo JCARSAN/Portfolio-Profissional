@@ -4,12 +4,13 @@ import { PortfolioWork } from "./PortfolioWork";
 
 type PortFolioProps = {
     scrollPosition: number;
+    animationPosition: number;
 }
 
-export function Portfolio({ scrollPosition } : PortFolioProps){
+export function Portfolio({ scrollPosition, animationPosition } : PortFolioProps){
     const [animated,setAnimated] = useState(false);
 
-    if(!animated && scrollPosition >= 1700){
+    if(!animated && scrollPosition >= animationPosition){
         setAnimated(true);
     }
 

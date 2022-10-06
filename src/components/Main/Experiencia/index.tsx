@@ -5,13 +5,14 @@ import { BiRightArrow } from 'react-icons/bi';
 
 type ExperienciaProps = {
     scrollPosition: number;
+    animationPosition: number;
 }
 
-export function Experiencia({ scrollPosition } : ExperienciaProps){
+export function Experiencia({ scrollPosition, animationPosition } : ExperienciaProps){
 
     const [animated,setAnimated] = useState(false);
 
-    if(!animated && scrollPosition >= 900){
+    if(!animated && scrollPosition >= animationPosition){
         setAnimated(true);
     }
 

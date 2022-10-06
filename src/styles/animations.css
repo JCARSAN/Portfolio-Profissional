@@ -55,7 +55,7 @@
 
 .grow-up{
     animation: growUp;
-    animation-duration: 1s;
+    animation-duration: 500ms;
 }
 
 @keyframes growUp {

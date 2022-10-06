@@ -5,19 +5,20 @@ import { TbBrandReactNative } from 'react-icons/tb'
 
 type HabilityProps = {
     scrollPosition: number;
+    animationPosition: number;
 }
 
-export function Tecnologias({scrollPosition} : HabilityProps){
+export function Tecnologias({scrollPosition, animationPosition} : HabilityProps){
 
     const [descriptionText,setDescriptionText] = useState('');
 
-    console.log('Habilidades: ',scrollPosition);
+    //console.log('Scroll Top: ',scrollPosition);
     //console.log('Tamanho da janela: ',window.innerHeight);
     //console.log('Outher height: ',window.outerHeight);
 
     const [animated,setAnimated] = useState(false);
 
-    if(!animated && scrollPosition >= 1200){
+    if(!animated && scrollPosition >= animationPosition){
         setAnimated(true);
     }
 

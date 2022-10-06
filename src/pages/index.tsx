@@ -1,4 +1,5 @@
-import { VStack, Flex, Text, Box, Heading, Image, HStack, Spinner } from '@chakra-ui/react'
+import { VStack, Flex, Text, Box, Heading, Image, HStack, Spinner } from '@chakra-ui/react';
+import Head  from "next/head";
 import { MenuNav } from '../components/MenuNav'
 import { useRouter } from 'next/router'
 import { useState } from 'react';
@@ -32,6 +33,9 @@ export default function Home() {
       onScroll={router.isReady? document.onscroll = handleScroll : null}
       
     >
+      <Head>
+        <title>Júlio C. Santos | Desenvolvedor Front-End</title>
+      </Head>
       <MenuNav isScrolled={isScrolled} />
       <Main scrollPosition={scrollPosition} deviceHeight={router.isReady ? window.innerHeight : 0}/>
       <Footer /> 
